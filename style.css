@@ -1,0 +1,796 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 20px;
+  scroll-behavior: smooth;
+}
+
+body {
+  box-sizing: border-box;
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  height: 100vh;
+  background: rgba(255, 255, 255, 0.387);
+  /* background-image: url(./images/judah.jpg);
+  background-size: cover;
+  background-repeat: no-repeat; */
+  background: black;
+
+}
+
+:root {
+  /* color scheme for each section. Green, brown, orange*/
+  --bg-1-main: #081c15;
+  --bg-2-secondary: #1b4332;
+  --bg-3-tetiary: #2d6a4f;
+  --bg-4-supplementary: #40916c;
+  --bg-5-main2: #52b788;
+  --bg-6-secondary2: #74c69d;
+  --bg-7-tetiary2: #656d4a;
+
+  --content1-supplementary: #a4ac86;
+  --content2-supplementary: #9d6b53;
+  --content3-supplementary: #8a5a44;
+  --content4-supplementary: #a56336;
+  --content5-supplementary: #edc531;
+  --content6-supplementary: #fad643;
+
+  --general-1: #f2f4f3;
+  --general-2: #0a0908;
+  /* END OF COLOR SCHEME */
+
+  /* OTHER SCHEMES (for backup) */
+  --bg-color-main: rgb(3, 128, 28);
+  --bg-color-head: rgba(49, 149, 69, 0.145);
+  --bg-color-about: rgba(119, 241, 168, 0.857);
+  --text-clr-head: black;
+  --icons-clr: rgb(250, 10, 20);
+  --anchor-links: rgb(255, 30, 20);
+  --lin-gr-about1: linear-gradient();
+  --border: 1px solid black;
+  --bd-bottom-lists: 1px solid white;
+  --max-width: 100vw;
+  --min-height: 100vh;
+  /* for typewriting text */
+  --typewriting-spd: 3s;
+  /* Border Radius for Grid */
+  --border-rds-grid: 12px;
+}
+
+#main-container {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  /* gap: 1em; */
+  position: relative;
+  z-index: 1;
+  /* background-image: url(./images/Gradient.jpg); */
+  background-position: fixed;
+}
+
+.logo-image-container {
+  width: 100px;
+}
+
+.logo {
+  border-radius: 5px;
+  max-width: 100%;
+  object-fit: cover;
+  height: 100%;
+}
+
+#navigation {
+  position: fixed;
+  /* top: 2%; */
+  /* right: 0; */
+  display: flex;
+  justify-content: space-around;
+  /* left: 30%; */
+  margin: 2rem;
+  min-height: 50px;
+  min-width: var(--max-width);
+  /* position: inherit; */
+  z-index: inherit;
+}
+
+#navigation nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.nav-list:hover .nav-items {
+  opacity: 0.5;
+  filter: blur(2px);
+}
+
+.nav-list .nav-items:hover {
+  opacity: 1;
+  filter: blur(0px);
+  font-weight: 600;
+  font-style: italic;
+}
+
+#navigation .toggle {
+  position: fixed;
+  right: 5%;
+  top: 1%;
+}
+
+/* Animation for NavBar */
+/* @keyframes shaky {
+  0% {
+    transform: translateX(20px);
+  }
+
+  50% {
+    transform: translateY(-5px);
+  }
+
+  75% {
+    transform: translateX(-20px);
+  }
+
+  100% {
+    transform: translateY(5px);
+  }
+} */
+
+.toggle .fa-hamburger {
+  border-radius: 10px;
+  animation: shaky 2s 1s forwards infinite alternate;
+  transition: 0.2s all ease-in-out;
+}
+
+.toggle .fa-hamburger:is(:hover, :focus, :visited) {
+  /* color: red; */
+  /* background-color: white; */
+  cursor: pointer;
+  /* transform: translateX(20px); */
+}
+
+/* For Accessibility */
+.fa-hamburger:focus {
+  outline: 1px solid black;
+}
+
+#toggle {
+  visibility: hidden;
+}
+
+#navigation #toggle:checked~nav>.nav-list {
+  display: flex;
+  flex-direction: column;
+  /* transform: translateX(-2px); */
+  isolation: isolate;
+  z-index: 100;
+}
+
+#navigation-overlay {
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+  opacity: 1;
+}
+
+nav .nav-list {
+  min-width: 180px;
+  list-style: none;
+  display: none;
+  padding: 20px 20px;
+  background-color: white;
+  border: 1px solid black;
+  align-items: center;
+  transition: transform 2s ease-in-out;
+}
+
+.nav-list .nav-items {
+  margin: 20px 20px;
+  position: relative;
+  transition: transform 0.4s ease-in-out;
+}
+
+.nav-items:hover {
+  -webkit-text-decoration: 2px underline red;
+  text-decoration: 2px underline red;
+  transform: translateY(-2px);
+}
+
+.nav-items a {
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+/* Typewriter Animation */
+#head h2 .typing {
+  font-style: italic;
+  /* background: #C9CF0E; */
+  background: radial-gradient(ellipse farthest-corner at center center, var(--bg-5-main2) 0%, var(--bg-6-secondary2) 50%, var(--bg-7-tetiary2) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+
+
+#head {
+  display: flex;
+  gap: 2em;
+  flex-direction: column;
+  align-items: center;
+  background-color: ;
+  justify-content: space-around;
+  max-width: var(--max-width);
+  padding-bottom: 10px;
+  position: relative;
+  min-height: var(--min-height)
+    /* min-height: 20vh; */
+}
+
+#head::after {
+  content: "";
+  z-index: -1;
+  background-image: url(./images/Header-Background.jpeg);
+  background-position: center;
+  background-size: cover;
+  position: absolute;
+  inset: 0;
+  opacity: .5;
+}
+
+.head-background img {
+  opacity: .2;
+  -o-object-position: center;
+  object-position: center;
+  position: relative;
+  z-index: -1;
+  display: none;
+  -o-object-fit: scale-down;
+  object-fit: scale-down;
+}
+
+.head-top {
+  /* align-self: center; */
+  text-align: center;
+  /* min-height: 20vh; */
+  position: relative;
+  top: 100px;
+  margin-bottom: 20px;
+}
+
+/* Container for h2 typewriting text */
+.typewriting-text {
+  margin-top: 20px
+}
+
+/* Deep Text Animation */
+/* The Text for the animation */
+.head-top h1 {
+  position: relative;
+  /* outline: 1px solid black; */
+  width: max-content;
+  /* color: rgba(128, 128, 128, 0); */
+  color: white;
+  opacity: 0;
+  animation: fading-for-header 3s ease-in-out forwards;
+}
+
+/* Deeper Typing Animation */
+h1::before,
+h1::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+}
+
+/* h1::before {
+  background: grey;
+  animation: typewriter var(--typewriting-spd) 2s steps(18) forwards;
+}
+
+h1::after {
+  width: 0.125rem;
+  /* For blinking effect 
+  animation: typewriter var(--typewriting-spd) 2s steps(18) forwards, blinking 800ms steps(18) 1s infinite;
+  background: red;
+
+} */
+
+.me {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+/* Link for Joining me. */
+.join-me {
+  text-decoration: none;
+}
+
+.join {
+  color: orangered;
+}
+
+.join-me span:hover {
+  color: red;
+}
+
+@keyframes typewriter {
+  to {
+    left: 100%;
+  }
+}
+
+@keyframes blinking {
+  to {
+    background: transparent;
+  }
+}
+
+/* Animation for the Header */
+@keyframes fading-for-header {
+  to {
+    opacity: 1;
+    transform: translateY(20px);
+  }
+}
+
+.head-top h2 {
+  -webkit-text-decoration: wavy black 1px;
+  text-decoration: wavy black 1px;
+}
+
+.head-body {
+  line-height: 1.5;
+  max-width: 50%;
+  color: var(--text-clr-head);
+  /* min-height: 20vh; */
+}
+
+.head-body p {
+  position: relative;
+  top: 10em;
+  text-align: center;
+  position: relative;
+  top: 20px;
+  overflow-y: hidden;
+  font-weight: 600;
+  color: white;
+  /* Animation for fading text */
+  animation: fading-for-text 2.2s ease 4.8s forwards;
+  opacity: 0;
+}
+
+/* Animation for fading text */
+@keyframes fading-for-text {
+  to {
+    opacity: 1;
+    transform: translateY(-20px);
+  }
+}
+
+
+.social-icons {
+  display: flex;
+  gap: 1.1em;
+  color: black;
+  position: relative;
+  z-index: 0;
+}
+
+.social-icons i {
+  filter: grayscale(0);
+  /* color: black; */
+  transition: transform 0.4s ease-in-out 0.01s;
+  cursor: pointer;
+  text-decoration: none;
+  /* color: white; */
+}
+
+.social-icons i:hover,
+i:focus {
+  /* color: red; */
+  color: var(--bg-6-secondary2);
+  opacity: .7;
+  transform: translateY(-10px) scale(1.5);
+}
+
+/* INDIVIDUAL FOR EACH ICON. */
+.fa-github {
+  color: #3c6586;
+}
+
+.fa-twitter {
+  color: lightblue;
+}
+
+.fa-instagram {
+  color: pink;
+}
+
+.fa-linkedin {
+  color: blue;
+}
+
+/* The About Section Styles */
+#about {
+  border: 1px solid rgba(116, 110, 110, 0.101);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  /* background-color: var(--bg-color-about); */
+  align-items: center;
+  text-align: center;
+  font-family: 'Sue Ellen Francisco', cursive;
+  gap: 2rem;
+  justify-content: space-between;
+  background-image: url(./images/Background\ Developer.jpg);
+  background-size: cover;
+}
+
+.about-top {
+  /* background: var(--bg-color-about); */
+  /* background-color: #fefae0; */
+  color: black;
+  padding: 20px;
+}
+
+.about-top img {
+  width: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  -o-object-position: top;
+  object-position: top;
+  height: 100%;
+  /* aspect-ratio: 16/9; */
+  margin-bottom: 0;
+}
+
+.about-top h2 {
+  font-weight: 600;
+  -webkit-animation: animation-header 1s infinite alternate;
+  display: inline;
+  /* position: sticky;
+inset: 0; */
+}
+
+p.flex-items {
+  display: flex;
+  font-size: .7rem;
+  flex-direction: column;
+  padding: 1rem .5rem;
+  border: 0;
+  border-radius: 10px;
+  gap: .7rem;
+}
+
+/* .flex-card {
+  border: 1px black solid;
+  border-radius: 20px;
+} */
+
+.about-top p {
+  max-width: 50ch;
+  margin-inline: 50px;
+  line-height: 1.6s;
+  border: 1px black solid;
+  background-color: white;
+  color: black;
+  font-weight: 600;
+  padding: 20px;
+}
+
+.about-body {
+  margin: 0 auto;
+  margin-top: 20px;
+}
+
+.about-body h2 {
+  border: 2px hsl(39deg, 51%, 75%) solid;
+  display: inline-block;
+  padding-inline: 20px;
+  padding-block: 10px;
+}
+
+.heart {
+  color: red;
+}
+
+
+.about-body .motiv-text {
+  max-width: 50ch;
+  text-align: justify;
+  font-size: 16px;
+  padding: 10px 10px;
+  margin: 0 auto;
+}
+
+/* SKILL-SET SECTION. */
+#skill-set {
+  display: flex;
+  flex-flow: column nowrap;
+  background-color: white;
+  color: black;
+}
+
+/* Projects Section */
+.about-myprojects {
+  /* background-image: url('./images/Neon1.jpg'); */
+  background: black;
+  color: white;
+  width: 100%;
+  /* height: 100vh; */
+  background-repeat: no-repeat;
+  padding: 2rem;
+  background-position: center;
+}
+
+/* CAROUSEL AREA. */
+.carousel {
+  width: 600px;
+  height: 550px;
+  position: relative;
+  border-radius: 20px;
+  margin: 0 auto;
+  overflow: hidden;
+  /* padding: 20px; */
+  transition: .6s transform ease-in-out;
+}
+
+.carousel-track-container {
+  width: 100%;
+  height: 100%;
+  background: green;
+  /* padding: 50px; */
+  /* border-radius: 20px; */
+  position: relative;
+  /* overflow: hidden; */
+  /* border: 1px solid white; */
+}
+
+/* The UL FOR THE TRACK CONTAINER.*/
+.carousel-slides-list {
+  /* display: flex; */
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+/* THE LIs FOR THE TRACK CONTAINER. */
+.carousel-slide {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  overflow: hidden;
+  background: blue;
+  width: 100%;
+  /* margin: 20px; */
+}
+
+/* THE IMAGES THAT WILL DISPLAY THE PROJECTS. */
+.carousel-photo {
+  height: 450px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.carousel-photo+p {
+  color: white;
+  margin-bottom: 50px;
+}
+
+/* Buttons for the carousel (for navigation) */
+.right-btn,
+.left-btn {
+  position: absolute;
+  border: 0;
+  background: none;
+  bottom: 50%;
+  top: 50%;
+  cursor: pointer;
+}
+
+/* the image itself of the button. */
+.navigation-btn {
+  height: 30px;
+  width: 30px;
+  background: red;
+  border-radius: 20px;
+  padding: 5px;
+  box-shadow: -5px 0 15px 0 rgba(0, 0, 2, .75);
+  transition: .5s transform ease-in-out;
+}
+
+.navigation-btn:hover {
+  background-color: white;
+  opacity: .7;
+  transform: translateY(-10px);
+}
+
+.right-btn {
+  right: 0%;
+}
+
+.left-btn {
+  left: 0%;
+  z-index: 1;
+}
+
+/* for when i reach the beginning, and the ending of the slide. */
+.is-hidden {
+  opacity: 0;
+  display: none;
+}
+
+/* END OF CAROUSEL SHOW */
+
+/* inactive-removed. */
+.my-works {
+  text-align: center;
+  color: rgba(255, 255, 255, 0.868);
+}
+
+/* The Grid of my Projects. */
+.grid-projects {
+  display: grid;
+  place-content: center;
+  grid-template-columns: repeat(1, 1fr);
+}
+
+/* Dealing with the grid items. */
+.project {
+  --padding: 1rem;
+  /* border: 1px solid black; */
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  margin: 10px 10px;
+  width: 60%;
+  border-radius: var(--border-rds-grid);
+}
+
+.project-top {
+  background: #f1faee;
+  padding: var(--padding);
+  padding-bottom: 0;
+}
+
+/* The name of the Project */
+.project-name {
+  font-size: 1.2rem;
+  font-style: italic;
+  color: #d1d710c7;
+  margin-bottom: 20px;
+}
+
+/* The description of the project */
+.project-desc {
+  font-size: 0.9rem;
+  color: black;
+  margin-bottom: 20px;
+}
+
+.project-img {
+  overflow: hidden;
+  margin-bottom: 0;
+}
+
+.img-for-prj {
+  object-fit: cover;
+  /* This is the best Object fit value, for it brings the image at full width with normal image size. */
+  object-position: contain;
+  max-height: 200px;
+  width: 100%;
+  /* You'll use object-fit with either a fixed width, or a fixed height. */
+  /* min-height: 200px; */
+  /* aspect-ratio: 16/9; */
+}
+
+/* FOR THE CONTACT ME SECTION. */
+/* each platform block for the contact me section. */
+#contact {
+  background-color: white;
+  color: black;
+}
+.contact-block-platform {
+
+}
+
+
+@-webkit-keyframes first-anime {
+  0% {
+    transform: translateY(-5px);
+  }
+
+  50% {
+    transform: translateX(-10px);
+  }
+
+  75% {
+    transform: translateX(10px);
+  }
+
+  100% {
+    transform: translateX(-15px);
+  }
+}
+
+@keyframes first-anime {
+  0% {
+    transform: translateY(-5px);
+  }
+
+  50% {
+    transform: translateX(-10px);
+  }
+
+  75% {
+    transform: translateX(10px);
+  }
+
+  100% {
+    transform: translateX(-15px);
+  }
+}
+
+@media (min-width: 1024px) {
+  #navigation {
+    top: -2%;
+    left: 0;
+    width: 100%;
+    background-color: var(--background-color);
+    box-shadow: var(--box-shadow);
+  }
+
+  .scrolled-nav a {
+    color: var(--text);
+  }
+
+  .nav-list {
+    margin: 0;
+  }
+
+  .nav-list:hover .nav-items {
+    opacity: 1;
+    filter: none;
+  }
+
+  .toggle .fa-hamburger {
+    display: none;
+  }
+
+  #navigation #toggle:checked~nav>.nav-list {
+    justify-content: flex-start;
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  nav .nav-list {
+    padding: 10px 10px;
+    font-size: .7rem;
+    display: flex;
+    background-color: transparent;
+    border: 0;
+  }
+
+  .nav-items a {
+    color: white;
+  }
+
+  /* ROOT COLORS FOR THE SWITCH STYLE OF THE NAVIGATION BAR. */
+  .scrolled-nav {
+    --text: red;
+    --inverse-text: black;
+    --background-color: white;
+    --box-shadow: 0 0 5px 0 rgba(0, 0, 0, .45);
+  }
+}
+
+/* ANIMATION FOR AUTO-SLIDING. */
+
+
+/*# sourceMappingURL=style.css.map */

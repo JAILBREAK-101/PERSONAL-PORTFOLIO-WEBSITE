@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="style.css">
+    <title>My Website</title>
+    <!-- Icons -->
+    <link rel="stylesheet" href="./css/all.min.css">
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,400;0,700;1,500&display=swap"
+        rel="stylesheet">
+    <!-- <script src="./js files/app.js" defer></script> -->
+    <!-- Fonts for About Me Page -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <!-- SCRIPT -->
+    <!-- <script src="/js files/my-logic.js"></script> -->
+</head>
+
+<body>
+    <!-- The Main Container -->
+    <main id="main-container">
+        <!-- Navigation Menu Section-->
+        <section id="navigation" class="scrolled-nav">
+            <div class="logo-image-container">
+                <img src="./images/My Logo.png" class="logo" alt="my-logo">
+            </div>
+            <!-- Our overlay for when we open our nav-bar -->
+            <div class="other-part-nav">
+
+                <div id="navigation-overlay"></div>
+                <label class="toggle" for="toggle"><i tabindex="0" class="fa-2x fa fa-hamburger"></i></label>
+                <input type="checkbox" name="toggle" id="toggle">
+                <nav class="nav">
+                    <ul class="nav-list">
+                        <li class="nav-items"><a href="#head" class="anchor-links">Home</a></li>
+                        <!-- <li class="nav-items"><a href="#about" class="anchor-links">About</a></li> -->
+                        <!-- <li class="nav-items"><a href="#skill-set" class="anchor-links">Skill-Set</a></li> -->
+                        <li class="nav-items"><a href="#projects" class="anchor-links">PROJECTS</a></li>
+                        <li class="nav-items"><a href="#contact" class="anchor-links">contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </section>
+        <!-- End of Navigation Section -->
+
+        <!-- Our Head (HOME) section -->
+        <section id="head">
+            <!-- <div class="head-background">
+                <img src="./images/judah.jpg" alt="">
+            </div> -->
+            <div class="head-top">
+                <h1>Hi, I'm Samuel!</h1>
+            </div>
+            <div class="typewriting-text">
+                <h2><span class="typing"></span>
+                    <h2></h2>
+            </div>
+            <div class="head-body">
+                <p> <span class="scroll"></span>
+                </p>
+            </div>
+            <div class="social-icons">
+                <a href="#"><i class="fa-2x fa fa-brands fa-github"></i></a>
+                <a href="#"><i class="fa-2x fa fa-brands fa-twitter"></i></a>
+                <a href="#"><i class="fa-2x fa fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-2x fa fa-brands fa-linkedin"></i></a>
+                <!-- <i class="fa fa-brands fa-menu"></i> -->
+            </div>
+        </section>
+
+        <!-- Our About Me Section (about me) -->
+        <section id="about">
+            <div class="about-top">
+                <h2>About Me</h2>
+                <!-- My Image comes in here. -->
+                <p class="flex-items"><img src="./images/Gbemiga.jpg" alt="image of me" height="20px" width="20px"> I am
+                    Samuel, a Creative Front-End WebDeveloper, Application Developer (Web) and Graphics Designer.
+                    I
+                    create Websites for organizations, and build WebApps that can be used as Software Application
+                    using HTML, CSS and Javascript.
+                    I started my coding journey at the age of 16 (2020) and i've been advancing ever since.
+                    <a class="join-me" href="#">
+                        <span class="join"><a href="#projects">JOIN ME TO EXPLORE MY WORKS.</a></span>
+                    </a>
+                </p>
+            </div>
+        </section>
+
+        <!-- SKILL-SET SECTION. -->
+        <section class="skill-set" id="skill-set">
+            <!-- GRID LAYOUT COMES IN HERE. -->
+            <h2>These are my skills, and the tools i use to emphasis them: </h2>
+            <div class="skill-set-layout">
+                <div class="skills">
+                    <h3>MY SKILLS</h3>
+                    <div class="card-layout">
+                        <div class="card">
+                            <h4>Frontend Web Development</h4>
+                            <p>Using HTML, CSS and Javascript</p>
+                        </div>
+                        <div class="card">
+                            <h4>Web-App Development</h4>
+                            <p>Using Javascript and Python</p>
+                        </div>
+                        <div class="card">
+                            <h4>Web Design</h4>
+                            <p>Using Figma</p>
+                        </div>
+                        <div class="card">
+                            <h4>Graphics Designer</h4>
+                            <p>Using Adobe Illustrator and Corel Draw</p>
+                        </div>
+                        <div class="card">
+                            <h4>Pythonista (Software Engineer)</h4>
+                            <p>Using Python (Django)</p>
+                        </div>
+                        <div class="card">
+                            <h4></h4>
+                            <img src="" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="tools">
+                    <h3>MY TOOLS</h3>
+                </div>
+            </div>
+        </section>
+
+        <section class="projects" id="projects">
+            <div class="about-myprojects">
+                <h3 class="my-works">
+                    CHECK OUT MY AMAZING WORKS
+                </h3>
+
+                <!-- THE CAROUSEL FOR PROJECTS -->
+                <section class="carousel">
+                    <button class="left-btn is-hidden"><img class="navigation-btn left" src="/icon-previous.svg"
+                            alt="Previous button"></button>
+                    <div class="carousel-track-container">
+                        <ul class="carousel-slides-list">
+                            <li class="carousel-slide current-slide"><img src="/images/laptop.jpg" alt="first image"
+                                    class="carousel-photo">
+                                <p>Project 1</p>
+                            </li>
+                            <li class="carousel-slide"><img src="/images/origami.jpg" alt="second image"
+                                    class="carousel-photo">
+                                <p>Project 2</p>
+                            </li>
+                            <li class="carousel-slide"><img src="/images/pexels-antonio-batinić-4164418.jpg"
+                                    alt="third image" class="carousel-photo">
+                                <p>Project 3</p>
+                            </li>
+                            <li class="carousel-slide"><img src="/images/pro.jpg" alt="fourth image"
+                                    class="carousel-photo">
+                                <p>Project 4</p>
+                                <!-- Project description and button comes here -->
+                            </li>
+                            <li class="carousel-slide"><img src="/images/code.jpg" alt="fifth image"
+                                    class="carousel-photo">
+                                <p>Project 5</p>
+                            </li>
+                            <!-- ADD MORE CAROUSEL SLIDES, IF NEW WORKS ARE ADDED. -->
+                        </ul>
+                    </div>
+                    <button class="right-btn" id="right-button"><img class="navigation-btn right" src="/icon-next.svg"
+                            alt="Next Button"></button>
+                </section>
+
+                <div class="about-body">
+                    <h2 class="about-header1">What Motivated me <div class="fa fa-lightbulb"></div>
+                    </h2>
+                    <p class="motiv-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptate animi
+                        nesciunt
+                        minus quisquam ipsum ad itaque temporibus alias, iure quibusdam omnis eius aperiam expedita
+                        veniam
+                        inventore ab maxime nam officiis.
+                        Ducimus, sed necessitatibus. Totam ex eveniet voluptatum illum autem? Distinctio ab dolorem
+                        harum.
+                        Quis vel molestiae, impedit nemo quidem qui mollitia nobis molestias non atque aspernatur
+                        labore,
+                        sequi, explicabo reiciendis.
+                        Beatae suscipit ea perspiciatis? Accusantium rem quod esse incidunt excepturi quisquam odio
+                        voluptates veritatis doloribus neque, modi ratione expedita alias, est omnis soluta, maiores
+                        voluptatibus? Repudiandae quisquam vero nemo praesentium.
+                        Laudantium corporis qui facilis, id iure sed impedit! Eveniet quisquam distinctio, porro autem,
+                        placeat quis amet voluptatem exercitationem quae magnam itaque incidunt! Odit, voluptatibus
+                        iste.
+                        Aut libero magni quis excepturi!
+                        Nobis ab porro doloribus accusamus quidem facere sequi, repellendus iste odit cumque officiis
+                        ratione. Fuga, quo tempora maxime ut voluptatem voluptas illo saepe deleniti fugiat consequatur
+                        voluptatum eaque illum dolores!</p>
+                </div>
+        </section>
+
+        <section class="contact" id="contact">
+            <!-- CONTACT LAYOUT FOR INFORMATION ON HOW TO REACH ME, COMES HERE. -->
+            <!-- <div class="about-footer">
+                    <p>Wanna know more about me, to get to hang-out and be friends? <span class="heart">❤</span> <a
+                            href="#contact-me">Click here</a>.
+                    </p>
+                </div> -->
+
+            <!-- WHAT I REALLY NEED FOR THE CONTACT ME PAGE (section). -->
+            <div class="contact-container">
+                <h3 class="contact-header">
+                    Reach me on.
+                </h3>
+                <div class="contact-details">
+                    <!-- Each of the contact block. -->
+                    <div class="contact-block-platform">
+                        <div class="contact-icon-con">
+                            <img src="" alt="" class="contact-icon">
+                        </div>
+                        <span class="contact-block-text">@ <a href="#">k.i.n.g Genix</a></span>
+                    </div>
+
+                    <div class="contact-block-platform">
+                        <div class="contact-icon-con">
+                            <img src="" alt="" class="contact-icon">
+                        </div>
+                        <span class="contact-block-text">@ <a href="#">Oluwagbemiga</a></span>
+                    </div>
+
+                    <div class="contact-block-platform">
+                        <div class="contact-icon-con">
+                            <img src="" alt="" class="contact-icon">
+                        </div>
+                        <span class="contact-block-text">@ <a href="#">legendn351@gmail.com</a></span>
+                    </div>
+                </div>
+
+                <div class="contact-form-con">
+                    <!-- Connect this to Php to be sent to my email. (Whenever user sends me an email). -->
+                    <form action="#">
+                        <label for="text">Send me a message</label><br>
+                        <input type="text" name="text" id="text">
+                        <button class="cta-btn">Send</button>
+                    </form>
+
+                    <div class="give-me-a-job">
+                        <h4 for="job">What can i do for you</h4>
+                        <button class="cta-btn">Give me a job</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- MAIN SCRIPT APPLICATION FILES. -->
+    <script src="./javascript/my-logic.js"></script>
+    <!-- ANOTHER MAIN SCRIPT FOR THE WEBSITE. -->
+    <script src="./javascript/main.js"></script>
+
+
+    <!-- For typed Animation -->
+    <!-- J-QUERY. -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"
+        referrerpolicy="no-referrer"></script>
+    <script>
+        const typing = new Typed(".typing", {
+            strings: ["", "FrontEnd WebDeveloper", "Pythonista", "Graphics Designer", "Open Source Contributor", "Web-Application Developer"],
+            typeSpeed: 50,
+            backSpeed: 60,
+            loop: true,
+        })
+    </script>
+</body>
+
+</html>
